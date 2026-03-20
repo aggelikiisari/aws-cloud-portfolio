@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Validate HTML
+        run: |
+          pip install html5validator --quiet
+          html5validator --root . --also-check-css \
+            --ignore-re ".*README.*"
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
