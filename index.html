@@ -3,189 +3,150 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Angeliki Isari | AWS Cloud Portfolio</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <div class="container">
 
-<!-- HERO -->
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Angeliki Isari</h1>
+    <h2>Aspiring Cloud & DevOps Engineer</h2>
+    <p>
+      Building hands-on cloud projects using AWS, Git, and modern deployment workflows.
+    </p>
+    <a class="button" href="https://github.com/aggelikiisari/aws-cloud-portfolio" target="_blank">
+      View this project on GitHub
+    </a>
+  </section>
 
-<section class="hero">
+  <!-- ABOUT PROJECT -->
+  <section class="section">
+    <h2>About This Project</h2>
+    <div class="card">
+      <p>
+        This website is part of my cloud engineering portfolio.
+      </p>
+      <p>
+        It demonstrates a production-style static website deployed on AWS with a custom domain,
+        HTTPS, automated CI/CD pipeline, and a serverless visitor counter backend.
+      </p>
+      <p>
+        The architecture has evolved from a simple static deployment to a full cloud-native setup
+        using CDN, IaC principles, and serverless computing.
+      </p>
+    </div>
+  </section>
 
-<h1>Angeliki Isari</h1>
+  <!-- AWS SERVICES -->
+  <section class="section">
+    <h2>AWS Services Used</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Amazon S3</h3>
+        <p>Object storage used to host the static website files (HTML and CSS).</p>
+      </div>
+      <div class="card">
+        <h3>CloudFront</h3>
+        <p>Content Delivery Network (CDN) used to distribute the website globally and improve performance.</p>
+      </div>
+      <div class="card">
+        <h3>AWS Certificate Manager</h3>
+        <p>SSL/TLS certificate for secure HTTPS delivery via CloudFront.</p>
+      </div>
+      <div class="card">
+        <h3>Route 53 / Custom Domain</h3>
+        <p>Custom domain aggeliki.dev configured and connected to CloudFront.</p>
+      </div>
+      <div class="card">
+        <h3>AWS Lambda</h3>
+        <p>Serverless Python function that handles visitor count logic without any server management.</p>
+      </div>
+      <div class="card">
+        <h3>Amazon DynamoDB</h3>
+        <p>NoSQL database storing the visitor counter value, updated on every page visit.</p>
+      </div>
+      <div class="card">
+        <h3>API Gateway</h3>
+        <p>HTTPS endpoint that connects the frontend to the Lambda function.</p>
+      </div>
+      <div class="card">
+        <h3>GitHub Actions</h3>
+        <p>CI/CD pipeline that automatically validates and deploys on every push to main.</p>
+      </div>
+    </div>
+  </section>
 
-<h2>Aspiring Cloud & DevOps Engineer</h2>
+  <!-- DEPLOYMENT WORKFLOW -->
+  <section class="section">
+    <h2>Deployment Workflow</h2>
+    <div class="card workflow">
+      <p>Local Development (VS Code)</p>
+      <p>↓</p>
+      <p>Git Version Control</p>
+      <p>↓</p>
+      <p>GitHub Repository</p>
+      <p>↓</p>
+      <p>GitHub Actions — HTML Validation</p>
+      <p>↓</p>
+      <p>AWS S3 Sync + CloudFront Cache Invalidation</p>
+      <p>↓</p>
+      <p>Public HTTPS Website (aggeliki.dev)</p>
+    </div>
+  </section>
 
-<p>
-Building hands-on cloud projects using AWS, Git, and modern deployment workflows.
-</p>
+  <!-- ARCHITECTURE -->
+  <section class="section">
+    <h2>Cloud Architecture</h2>
+    <div class="card architecture">
+      <p>User</p>
+      <p>↓</p>
+      <p>CloudFront CDN + HTTPS</p>
+      <p>↓</p>
+      <p>Amazon S3 Bucket</p>
+      <p>↓</p>
+      <p>Static Website Files</p>
+      <p>&nbsp;</p>
+      <p>JavaScript (Frontend)</p>
+      <p>↓</p>
+      <p>API Gateway</p>
+      <p>↓</p>
+      <p>AWS Lambda (Python)</p>
+      <p>↓</p>
+      <p>Amazon DynamoDB</p>
+    </div>
+  </section>
 
-<a class="button" href="https://github.com/aggelikiisari/aws-cloud-portfolio" target="_blank">
-View this project on GitHub
-</a>
+  <!-- FUTURE IMPROVEMENTS -->
+  <section class="section">
+    <h2>Future Improvements</h2>
+    <div class="grid">
+      <div class="card">
+        <p>Infrastructure as Code using Terraform</p>
+      </div>
+      <div class="card">
+        <p>Security hardening with AWS WAF and CloudFront security headers</p>
+      </div>
+      <div class="card">
+        <p>CloudWatch monitoring dashboard and SNS alerts</p>
+      </div>
+      <div class="card">
+        <p>S3 bucket policy audit using Bash security scripts</p>
+      </div>
+    </div>
+  </section>
 
-</section>
-
-
-<!-- ABOUT PROJECT -->
-
-<section class="section">
-
-<h2>About This Project</h2>
-
-<div class="card">
-
-<p>
-This website is part of my cloud engineering portfolio.
-</p>
-
-<p>
-The goal of this project is to demonstrate how a static website can be deployed
-and delivered using cloud infrastructure on AWS.
-</p>
-
-<p>
-The architecture evolves from a simple static deployment to a production-style
-setup using CDN, HTTPS and automated deployments.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- AWS SERVICES -->
-
-<section class="section">
-
-<h2>AWS Services Used</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Amazon S3</h3>
-<p>
-Object storage used to host the static website files (HTML and CSS).
-</p>
-</div>
-
-<div class="card">
-<h3>CloudFront</h3>
-<p>
-Content Delivery Network (CDN) used to distribute the website globally and improve performance.
-</p>
-</div>
-
-<div class="card">
-<h3>HTTPS</h3>
-<p>
-Secure delivery of the website using encrypted HTTPS connections.
-</p>
-</div>
-
-<div class="card">
-<h3>GitHub</h3>
-<p>
-Source control and versioning for the project repository.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- DEPLOYMENT WORKFLOW -->
-
-<section class="section">
-
-<h2>Deployment Workflow</h2>
-
-<div class="card workflow">
-
-<p>Local Development (VS Code)</p>
-<p>↓</p>
-<p>Git Version Control</p>
-<p>↓</p>
-<p>GitHub Repository</p>
-<p>↓</p>
-<p>AWS S3 Static Hosting</p>
-<p>↓</p>
-<p>CloudFront CDN</p>
-<p>↓</p>
-<p>Public HTTPS Website</p>
-
-</div>
-
-</section>
-
-
-<!-- ARCHITECTURE -->
-
-<section class="section">
-
-<h2>Cloud Architecture</h2>
-
-<div class="card architecture">
-
-<p>User</p>
-<p>↓</p>
-<p>CloudFront CDN</p>
-<p>↓</p>
-<p>Amazon S3 Bucket</p>
-<p>↓</p>
-<p>Static Website Files</p>
-
-</div>
-
-</section>
-
-
-<!-- FUTURE IMPROVEMENTS -->
-
-<section class="section">
-
-<h2>Future Improvements</h2>
-
-<div class="grid">
-
-<div class="card">
-<p>CI/CD deployment using GitHub Actions</p>
-</div>
-
-<div class="card">
-<p>Custom domain configuration</p>
-</div>
-
-<div class="card">
-<p>AWS Certificate Manager for SSL</p>
-</div>
-
-<div class="card">
-<p>Serverless visitor counter</p>
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      Cloud Portfolio Project built with AWS S3, CloudFront, Lambda, DynamoDB, API Gateway and GitHub Actions.
+    </p>
+  </footer>
 
 </div>
 
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<p>
-Cloud Portfolio Project built with AWS S3, CloudFront and GitHub.
-</p>
-
-</footer>
-
-</div>
+<!-- VISITOR COUNTER -->
 <div id="visitor-counter" style="text-align: center; margin: 20px; font-family: sans-serif;">
   <p>👁️ Visitors: <span id="count">...</span></p>
 </div>
@@ -200,5 +161,6 @@ Cloud Portfolio Project built with AWS S3, CloudFront and GitHub.
       document.getElementById('count').textContent = 'unavailable';
     });
 </script>
+
 </body>
 </html>
