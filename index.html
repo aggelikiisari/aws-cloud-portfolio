@@ -186,6 +186,19 @@ Cloud Portfolio Project built with AWS S3, CloudFront and GitHub.
 </footer>
 
 </div>
+<div id="visitor-counter" style="text-align: center; margin: 20px; font-family: sans-serif;">
+  <p>👁️ Visitors: <span id="count">...</span></p>
+</div>
 
+<script>
+  fetch('https://uomkfcg3sg.execute-api.us-east-1.amazonaws.com/count')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('count').textContent = data.count;
+    })
+    .catch(error => {
+      document.getElementById('count').textContent = 'unavailable';
+    });
+</script>
 </body>
 </html>
