@@ -1,166 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angeliki Isari | AWS Cloud Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angeliki Isari | AWS Cloud Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
 
   <!-- HERO -->
-  <section class="hero">
-    <h1>Angeliki Isari</h1>
-    <h2>Aspiring Cloud & DevOps Engineer</h2>
-    <p>
-      Building hands-on cloud projects using AWS, Git, and modern deployment workflows.
-    </p>
-    <a class="button" href="https://github.com/aggelikiisari/aws-cloud-portfolio" target="_blank">
-      View this project on GitHub
-    </a>
-  </section>
-
-  <!-- ABOUT PROJECT -->
-  <section class="section">
-    <h2>About This Project</h2>
-    <div class="card">
-      <p>
-        This website is part of my cloud engineering portfolio.
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">AWS Cloud Portfolio</div>
+      <h1>Angeliki<br><span>Isari</span></h1>
+      <p class="hero-sub">Aspiring Cloud &amp; DevOps Engineer</p>
+      <p class="hero-desc">
+        Building hands-on cloud projects using AWS, Git, and modern deployment workflows.
       </p>
-      <p>
-        It demonstrates a production-style static website deployed on AWS with a custom domain,
-        HTTPS, automated CI/CD pipeline, and a serverless visitor counter backend.
-      </p>
-      <p>
-        The architecture has evolved from a simple static deployment to a full cloud-native setup
-        using CDN, IaC principles, and serverless computing.
-      </p>
+      <a class="button" href="https://github.com/aggelikiisari/aws-cloud-portfolio" target="_blank">
+        View on GitHub ↗
+      </a>
     </div>
-  </section>
-
-  <!-- AWS SERVICES -->
-  <section class="section">
-    <h2>AWS Services Used</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Amazon S3</h3>
-        <p>Object storage used to host the static website files (HTML and CSS).</p>
-      </div>
-      <div class="card">
-        <h3>CloudFront</h3>
-        <p>Content Delivery Network (CDN) used to distribute the website globally and improve performance.</p>
-      </div>
-      <div class="card">
-        <h3>AWS Certificate Manager</h3>
-        <p>SSL/TLS certificate for secure HTTPS delivery via CloudFront.</p>
-      </div>
-      <div class="card">
-        <h3>Route 53 / Custom Domain</h3>
-        <p>Custom domain aggeliki.dev configured and connected to CloudFront.</p>
-      </div>
-      <div class="card">
-        <h3>AWS Lambda</h3>
-        <p>Serverless Python function that handles visitor count logic without any server management.</p>
-      </div>
-      <div class="card">
-        <h3>Amazon DynamoDB</h3>
-        <p>NoSQL database storing the visitor counter value, updated on every page visit.</p>
-      </div>
-      <div class="card">
-        <h3>API Gateway</h3>
-        <p>HTTPS endpoint that connects the frontend to the Lambda function.</p>
-      </div>
-      <div class="card">
-        <h3>GitHub Actions</h3>
-        <p>CI/CD pipeline that automatically validates and deploys on every push to main.</p>
-      </div>
+    <div class="hero-counter">
+      <span class="counter-label">Visitors</span>
+      <span class="counter-num" id="count">…</span>
     </div>
-  </section>
+  </header>
 
-  <!-- DEPLOYMENT WORKFLOW -->
-  <section class="section">
-    <h2>Deployment Workflow</h2>
-    <div class="card workflow">
-      <p>Local Development (VS Code)</p>
-      <p>↓</p>
-      <p>Git Version Control</p>
-      <p>↓</p>
-      <p>GitHub Repository</p>
-      <p>↓</p>
-      <p>GitHub Actions — HTML Validation</p>
-      <p>↓</p>
-      <p>AWS S3 Sync + CloudFront Cache Invalidation</p>
-      <p>↓</p>
-      <p>Public HTTPS Website (aggeliki.dev)</p>
-    </div>
-  </section>
+  <main class="container">
 
-  <!-- ARCHITECTURE -->
-  <section class="section">
-    <h2>Cloud Architecture</h2>
-    <div class="card architecture">
-      <p>User</p>
-      <p>↓</p>
-      <p>CloudFront CDN + HTTPS</p>
-      <p>↓</p>
-      <p>Amazon S3 Bucket</p>
-      <p>↓</p>
-      <p>Static Website Files</p>
-      <p>&nbsp;</p>
-      <p>JavaScript (Frontend)</p>
-      <p>↓</p>
-      <p>API Gateway</p>
-      <p>↓</p>
-      <p>AWS Lambda (Python)</p>
-      <p>↓</p>
-      <p>Amazon DynamoDB</p>
-    </div>
-  </section>
+    <!-- ABOUT PROJECT -->
+    <section class="section">
+      <div class="section-label">01</div>
+      <h2>About This Project</h2>
+      <div class="prose-card">
+        <p>This website is part of my cloud engineering portfolio.</p>
+        <p>It demonstrates a production-style static website deployed on AWS with a custom domain,
+        HTTPS, automated CI/CD pipeline, and a serverless visitor counter backend.</p>
+        <p>The architecture has evolved from a simple static deployment to a full cloud-native setup
+        using CDN, IaC principles, and serverless computing.</p>
+      </div>
+    </section>
 
-  <!-- FUTURE IMPROVEMENTS -->
-  <section class="section">
-    <h2>Future Improvements</h2>
-    <div class="grid">
-      <div class="card">
-        <p>Infrastructure as Code using Terraform</p>
+    <!-- AWS SERVICES -->
+    <section class="section">
+      <div class="section-label">02</div>
+      <h2>AWS Services Used</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">S3</div>
+          <h3>Amazon S3</h3>
+          <p>Object storage used to host the static website files (HTML and CSS).</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">CF</div>
+          <h3>CloudFront</h3>
+          <p>CDN used to distribute the website globally and improve performance.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">ACM</div>
+          <h3>AWS Certificate Manager</h3>
+          <p>SSL/TLS certificate for secure HTTPS delivery via CloudFront.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">R53</div>
+          <h3>Route 53 / Custom Domain</h3>
+          <p>Custom domain aggeliki.dev configured and connected to CloudFront.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">λ</div>
+          <h3>AWS Lambda</h3>
+          <p>Serverless Python function that handles visitor count logic without any server management.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">DB</div>
+          <h3>Amazon DynamoDB</h3>
+          <p>NoSQL database storing the visitor counter value, updated on every page visit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">API</div>
+          <h3>API Gateway</h3>
+          <p>HTTPS endpoint that connects the frontend to the Lambda function.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">GH</div>
+          <h3>GitHub Actions</h3>
+          <p>CI/CD pipeline that automatically validates and deploys on every push to main.</p>
+        </div>
       </div>
-      <div class="card">
-        <p>Security hardening with AWS WAF and CloudFront security headers</p>
-      </div>
-      <div class="card">
-        <p>CloudWatch monitoring dashboard and SNS alerts</p>
-      </div>
-      <div class="card">
-        <p>S3 bucket policy audit using Bash security scripts</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      Cloud Portfolio Project built with AWS S3, CloudFront, Lambda, DynamoDB, API Gateway and GitHub Actions.
-    </p>
+    <!-- DEPLOYMENT WORKFLOW -->
+    <section class="section">
+      <div class="section-label">03</div>
+      <h2>Deployment Workflow</h2>
+      <div class="workflow-wrap">
+        <div class="workflow-step">
+          <span class="step-num">01</span>
+          <span class="step-text">Local Development<br><em>VS Code</em></span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">
+          <span class="step-num">02</span>
+          <span class="step-text">Git Version Control</span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">
+          <span class="step-num">03</span>
+          <span class="step-text">GitHub Repository</span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">
+          <span class="step-num">04</span>
+          <span class="step-text">GitHub Actions<br><em>HTML Validation</em></span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step">
+          <span class="step-num">05</span>
+          <span class="step-text">AWS S3 Sync<br><em>+ CloudFront Invalidation</em></span>
+        </div>
+        <div class="workflow-arrow">↓</div>
+        <div class="workflow-step highlight">
+          <span class="step-num">06</span>
+          <span class="step-text">Public HTTPS Website<br><em>aggeliki.dev</em></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="section">
+      <div class="section-label">04</div>
+      <h2>Cloud Architecture</h2>
+      <div class="arch-grid">
+        <div class="arch-col">
+          <h4>Static Delivery</h4>
+          <div class="arch-flow">
+            <div class="arch-node">User</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node accent">CloudFront CDN + HTTPS</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node">Amazon S3 Bucket</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node">Static Website Files</div>
+          </div>
+        </div>
+        <div class="arch-divider"></div>
+        <div class="arch-col">
+          <h4>Dynamic Counter</h4>
+          <div class="arch-flow">
+            <div class="arch-node">JavaScript (Frontend)</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node accent">API Gateway</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node">AWS Lambda (Python)</div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node">Amazon DynamoDB</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUTURE IMPROVEMENTS -->
+    <section class="section">
+      <div class="section-label">05</div>
+      <h2>Future Improvements</h2>
+      <div class="future-list">
+        <div class="future-item">
+          <span class="future-num">—</span>
+          <p>Infrastructure as Code using Terraform</p>
+        </div>
+        <div class="future-item">
+          <span class="future-num">—</span>
+          <p>Security hardening with AWS WAF and CloudFront security headers</p>
+        </div>
+        <div class="future-item">
+          <span class="future-num">—</span>
+          <p>CloudWatch monitoring dashboard and SNS alerts</p>
+        </div>
+        <div class="future-item">
+          <span class="future-num">—</span>
+          <p>S3 bucket policy audit using Bash security scripts</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Cloud Portfolio · AWS S3 · CloudFront · Lambda · DynamoDB · API Gateway · GitHub Actions</p>
+    <p>© 2026 Angeliki Isari</p>
   </footer>
 
-</div>
-
-<!-- VISITOR COUNTER -->
-<div id="visitor-counter" style="text-align: center; margin: 20px; font-family: sans-serif;">
-  <p>👁️ Visitors: <span id="count">...</span></p>
-</div>
-
-<script>
-  fetch('https://uomkfcg3sg.execute-api.us-east-1.amazonaws.com/count')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('count').textContent = data.count;
-    })
-    .catch(error => {
-      document.getElementById('count').textContent = 'unavailable';
-    });
-</script>
+  <script>
+    fetch('https://uomkfcg3sg.execute-api.us-east-1.amazonaws.com/count')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('count').textContent = data.count;
+      })
+      .catch(() => {
+        document.getElementById('count').textContent = 'unavailable';
+      });
+  </script>
 
 </body>
 </html>
