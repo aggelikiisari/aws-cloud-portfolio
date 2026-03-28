@@ -1,0 +1,11 @@
+aws_region         = "us-east-1"
+project_name       = "aws-cloud-portfolio"
+environment        = "prod"
+site_bucket_name   = "your-site-bucket-name"
+visitor_table_name = "visitor-counter"
+
+default_tags = {
+  Project   = "aws-cloud-portfolio"
+  ManagedBy = "terraform"
+  Owner     = "Angeliki Isari"
+}
